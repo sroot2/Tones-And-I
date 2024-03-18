@@ -1,5 +1,3 @@
-/* https://cdn.plyr.io/3.7.8/plyr.css */
-
 /*colors:
 tan: rgba(253, 220, 152, 1)
 black: rgba(45, 33, 9, 1)
@@ -9,26 +7,28 @@ light blue: rgba(143, 201, 232, 1)
 pale violet: rgba(235, 204, 241, 1)
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap'); @import "https://unpkg.com/open-props";
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+@import "https://unpkg.com/open-props";
+@import "https://cdn.plyr.io/3.7.8/plyr.css";
 
 :root {
      /* main UI color */
-    --plyr-color-main: red;
+    --plyr-color-main: rgba(235, 204, 241, 1);
       /* audio controls background */
-    --plyr-audio-controls-background: grey;
+    --plyr-audio-controls-background: rgba(252, 151, 151, 1);
       /* audio controls color */
-    --plyr-audio-control-color: #b7142f;
+    --plyr-audio-control-color: light blue: rgba(143, 201, 232, 1);
     /*     icon color on hover   */
-  --plyr-audio-control-color-hover: black;
+  --plyr-audio-control-color-hover: rgba(180, 57, 59, 1);
   /*   buffer backgroud */
-  --plyr-audio-progress-buffered-background: black;
+  --plyr-audio-progress-buffered-background: rgba(180, 57, 59, 1);
    --plyr-font-family: sans-serif;
-  --plyr-font-size-time: 32px;
+  --plyr-font-size-time: 20px;
 /*    tooltips  */
     --plyr-tooltip-background: fuchsia;
     --plyr-tooltip-color: black; 
   /*  icon size  */
-  --plyr-control-icon-size: 32px;
+  --plyr-control-icon-size: 20px;
 }  
 
   body {
@@ -58,6 +58,7 @@ main article figure {
   padding: 1em;
   margin: 0;
 }
+
 main aside figure {
     color: rgba(143, 201, 232, 1);
   padding: 1em;
@@ -66,4 +67,22 @@ main aside figure {
 
 aside{
   color: rgba(143, 201, 232, 1);
+}
+
+@media  (max-width: 400px) {
+  
+  :root {
+    --plyr-font-size-time: 15px;
+    --plyr-control-icon-size: 15px;
+  }
+  
+  main h1 {
+    font-size: 1.5em;
+  }
+  
+  main article {
+    flex-direction: column;
+  }
+  
+  
 }

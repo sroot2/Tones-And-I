@@ -38,6 +38,14 @@ pale violet: rgba(235, 204, 241, 1)
 }
 
 main {
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+main img {
+  max-width: 70%;
+  max-height: 1%;
+  display: block;
   margin-inline: auto;
 }
 
